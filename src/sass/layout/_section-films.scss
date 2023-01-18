@@ -10,9 +10,26 @@
     width: 336px;
     height: 455px;
     background-color: tomato;
-    border: solid 6px;
+    // border: solid 6px;
     // border-color: rgb(196, 255, 207);
+    border-radius: 5px;
 }
 .movie_title {
+    background-color: #c9ea0b;
+}
+.info {
+    background-color: #fff;
+    margin-top: 8px;
+    font-family: Roboto;
+font-style: Medium;
+font-size: 12px;
+line-height: 1.33;
+text-align: left;
+vertical-align: top;
+}
+.film_title {
     color: #000;
+}
+.film_genre {
+    color: rgba(255, 107, 8, 1);
 }
