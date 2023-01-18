@@ -1,0 +1,18 @@
+.cards {
+    background-color: aqua;
+}
+.films__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+.card {
+    width: 336px;
+    height: 455px;
+    background-color: tomato;
+    border: solid 6px;
+    // border-color: rgb(196, 255, 207);
+}
+.movie_title {
+    color: #000;
+}
