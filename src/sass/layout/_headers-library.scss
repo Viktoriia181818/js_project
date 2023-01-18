@@ -4,7 +4,8 @@
   margin-right: auto;
   padding: 40px 0px 62px;
 
-  background-color: #ffd;
+  color: var(--primary-text-color);
+  background-color: #000000;
   background-repeat: no-repeat;
   background-position: inherit;
   background-size: cover;
@@ -82,7 +83,7 @@
   font-size: 30px;
 
   line-height: 1.167;
-  
+
   @media screen and (min-width: 768px) {
     display: inline-block;
   }
