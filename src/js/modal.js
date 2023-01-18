@@ -11,10 +11,24 @@ export default class MoviesApiService {
     try {
       const url = `${BASE_URL}trending/movie/day?api_key=${API_KEY}`;
       const response = await axios.get(url);
-      console.log(response);
       return response.data;
     } catch (error) {
       Notify.failure('Oops, an error occurred');
     }
+  }
+  async getSearchFilms() {
+    try {
+      const url = `${BASE_URL}search/movie?api_key=${API_KEY}&query=${this.searchQuery}&page=${this.page}`;
+      const response = await axios.get(url);
+      return response.data;
+    } catch (error) {
+      Notify.failure('Oops, an error occurred');
+    }
+  }
+  get query() {
+    return this.searchQuery;
+  }
+  set query(newQuery) {
+    this.searchQuery = newQuery;
   }
 }
