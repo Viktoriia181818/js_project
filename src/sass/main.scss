@@ -2,9 +2,17 @@
 @import './base/basics';
 @import './base/variables';
 @import './base/container';
+@import './layout/spinner';
 @import './layout/headers-library';
 @import './layout/headers-home';
+@import './layout/search-films';
+@import './layout/trailer';
+@import './layout/button';
+@import './layout/slider';
 @import './layout/section-films';
 @import './layout/modal.scss';
+@import './layout/modal_movie_film';
 @import './layout/pagination';
+@import './layout/firebase';
+@import './layout/on_modal_team-info';
 @import './layout/footer';
