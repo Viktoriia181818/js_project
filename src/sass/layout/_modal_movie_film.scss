@@ -89,10 +89,10 @@
   
   .film__item {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   .film__details {
-    color: second-text-color;
+    color: #8C8C8C;
     min-width: 108px;
   }
   
@@ -167,6 +167,8 @@
   
   .film__trailer__btn {
     display: flex;
+    width: 112px;
+    height: 44px;
     padding: 6px 12px;
     align-items: center;
     border: 1px solid #000000;
@@ -216,4 +218,7 @@
 	top: 50%;
 	transform: translate(-50%, -50%);
 	fill: currentColor;
+}
+p {
+    margin: 0;
 }
