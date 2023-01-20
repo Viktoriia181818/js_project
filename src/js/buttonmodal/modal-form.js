@@ -1,5 +1,5 @@
-// import API_KEY from '../api/apiKey';
-import { load, save, remove } from './local-st-load-remove-save';
+
+import { load, save, remove } from './local-save';
 import trailer from './traile';
 
 const galleryFilm = document.querySelector('.cards__list--home');
@@ -8,6 +8,40 @@ const modalEl = document.querySelector('.modal');
 galleryFilm.addEventListener('click', onOpenModal);
 let movie_id;
 
+// Ф-ція відкриття модалки
+function onOpenModal(evt) {
+  evt.preventDefault();
+  if (
+    evt.target.nodeName !== 'IMG' &&
+    evt.target.nodeName !== 'P' &&
+    evt.target.nodeName !== 'A'
+  ) {
+    return;
+  }
+
+  evt.stopPropagation();
+
+  closeEsc();
+
+  modalEl.classList.add('is-open');
+
+  document.body.classList.add('stop-scrolling');
+
+  movie_id = evt.target.dataset.id;
+
+  // ____________local st----закидаєм картку фільму в папка film
+  const filmsLocalSt = localStorage.getItem(`film`);
+  const arrayFilmLocalSt = JSON.parse(filmsLocalSt);
+  const oneFilmById = arrayFilmLocalSt.find(
+    film => film.id === Number(movie_id)
+  );
+
+  // ____________local st----
+
+  murckupCard(oneFilmById);
+
+  closeBtn();
+  backdropClose();
 
   // --------test-btn--------------
   const btnWatchEl = document.querySelector('.btn__watch');
@@ -162,7 +196,63 @@ function changeTextBtnWatch(btnEl) {
     btnEl.setAttribute('data-show', 'true');
   }
 }
+// Ф-ція закриття модалки
+function onCloseBtn() {
+  modalEl.classList.remove('is-open');
+  document.body.classList.remove('stop-scrolling');
+}
+function closeBtn() {
+  const btnModalClos = document.querySelector('.close__button__modal');
+  btnModalClos.addEventListener('click', () => onCloseBtn());
+}
+// Close modal by Escape
+function closeEsc() {
+  window.addEventListener('keydown', closeModalByEsc);
+  function closeModalByEsc(e) {
+    if (e.code === 'Escape') {
+      onCloseBtn();
+      window.removeEventListener('keydown', closeModalByEsc);
+    }
+  }
+}
+// Close modal backdrop
+function backdropClose() {
+  const backdropEl = document.querySelector('.modal__backdrop');
+  backdropEl.addEventListener('click', onBackdropClick);
+  function onBackdropClick(evt) {
+    if (evt.currentTarget === evt.target) {
+      onCloseBtn();
+      backdropEl.removeEventListener('click', onBackdropClick);
+    }
+  }
+  }
+  // render film card
+function genresList(array) {
+  let array_genre_names = [];
+  let genre_namess = '';
 
+  for (const id of array) {
+    try {
+      const genre_name = localStorage.getItem(`genre`);
+      const arrayAllGenres = JSON.parse(genre_name);
+      const arrayIdGenres = arrayAllGenres.find(genre => genre.id == id);
+
+      array_genre_names.push(arrayIdGenres.name || 'n/a');
+
+      genre_namess = array_genre_names.join(', ');
+    } catch (error) {
+      console.error('Set state error: ', error.message);
+    }
+  }
+  return genre_namess;
+}
+function setPosters(poster_path) {
+  if (poster_path === null || poster_path === undefined) {
+    return 'https://i.pinimg.com/originals/74/3d/b2/743db230d891b47c1d8c66b161111b91.jpg';
+  }
+
+  return `https://www.themoviedb.org/t/p/w500${poster_path}`;
+}
 // Ф-ція рендеру кнопок модалки
 
 function btnChangeWatch() {
