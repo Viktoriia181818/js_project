@@ -1,5 +1,4 @@
 .header-library {
-  max-width: 320px;
   margin-left: auto;
   margin-right: auto;
   padding: 40px 0px 62px;
@@ -29,7 +28,6 @@
 @media screen and (min-width: 768px) {
   .header-library {
     padding: 40px 0px 60px;
-    max-width: 768px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
       url('../images/hd-libr-768.jpg');
   }
@@ -49,7 +47,7 @@
 
 @media screen and (min-width: 1280px) {
   .header-library {
-    max-width: 1280px;
+    // max-width: 1280px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
       url('../images/hd-libr-1280.jpg');
   }
@@ -72,6 +70,7 @@
   align-items: center;
   margin-bottom: 40px;
 }
+
 .header__logo {
   color: var(--primary-text-color);
 }

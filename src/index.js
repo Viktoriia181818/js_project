@@ -1,3 +1,6 @@
+
+import './js/fetch_api';
+
 import './js/refs';
 import './js/search-menu';
 import './js/button';
@@ -9,5 +12,7 @@ import './js/trailer';
 import './js/firebase';
 import './js/spinner';
 import './js/search-btn';
+
 import './js/pagination';
 import './js/on_modal_team-info';
+
