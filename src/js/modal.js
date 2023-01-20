@@ -7,6 +7,7 @@ export default class MoviesApiService {
     this.page = 1;
     this.searchQuery = '';
   }
+  // пошук популярних фільмів
   async getPopularFilms() {
     try {
       const url = `${BASE_URL}trending/movie/day?api_key=${API_KEY}`;
@@ -16,10 +17,32 @@ export default class MoviesApiService {
       Notify.failure('Oops, an error occurred');
     }
   }
+  // пошук фільмів за іменем
   async getSearchFilms() {
     try {
       const url = `${BASE_URL}search/movie?api_key=${API_KEY}&query=${this.searchQuery}&page=${this.page}`;
       const response = await axios.get(url);
+      return response.data;
+    } catch (error) {
+      Notify.failure('Oops, an error occurred');
+    }
+  }
+  // детально про фільм
+  async getFilmDetails(id) {
+    try {
+      const url = `${BASE_URL}movie/${id}?api_key=${API_KEY}`;
+      const response = await axios.get(url);
+      return response.data;
+    } catch (error) {
+      Notify.failure('Oops, an error occurred');
+    }
+  }
+  // трейлер до фільму
+  async getFilmTrailer(id) {
+    try {
+      const url = `${BASE_URL}movie/${id}/videos?api_key=${API_KEY}`;
+      const response = await axios.get(url);
+      console.log(response.data);
       return response.data;
     } catch (error) {
       Notify.failure('Oops, an error occurred');
