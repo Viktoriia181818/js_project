@@ -29,4 +29,10 @@ function insertFilmsLibrary(filmsMarkup) {
       } catch (error) {
           console.log(error);
       }
+}
+  const header = document.querySelector('.page-header');
+function insertFilmsLibrary(filmsMarkup) {
+    header.insertAdjacentHTML('afterend', filmsMarkup);
   }
+ 
+ 
