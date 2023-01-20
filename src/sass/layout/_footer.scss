@@ -1,0 +1,59 @@
+.footer {
+  background-color: var(--footer-bg-color);
+}
+
+.footer__copyright {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+
+  color: var(--second-text-color);
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 1.1875;
+  }
+}
+
+.footer__rights {
+  margin-top: 0;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 3px;
+  }
+}
+
+.footer__students {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__icon {
+  margin-left: 7px;
+  margin-right: 7px;
+  color: var(--primary-accent-color);
+}
+
+.footer__by {
+  margin-right: 3px;
+}
+
+.footer__link {
+  color: var(--second-text-color);
+  margin-left: 3px;
+  text-decoration: underline;
+  
+}
+
+  
