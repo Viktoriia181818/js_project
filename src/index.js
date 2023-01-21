@@ -6,7 +6,6 @@ import './js/buttonmodal/local-storage';
 
 // import './js/buttonmodal/modallibrary';
 // import './js/buttonmodal/traile';
-import './js/footer/footer';
 import './js/buttonmodal/modal-form';
 import './js/search-menu';
 import './js/button';
