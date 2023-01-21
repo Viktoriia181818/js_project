@@ -1,4 +1,4 @@
-import { load, save, remove } from './local-st-load-remove-save';
+import { load, save, remove } from './local-save';
 import { showListWatched } from '../btnlibrary';
 import { showListQueue } from '../btnlibrary';
 
@@ -253,7 +253,7 @@ function setPosters(poster_path) {
     return 'https://wipfilms.net/wp-content/data/posters/tt0338683.jpg';
   }
 
-  return `https://www.themoviedb.org/t/p/w500${poster_path}`;
+  return `https://www.themoviedb .org/t/p/w500${poster_path}`;
 }
 
 // Ф-ція рендеру кнопок модалки
