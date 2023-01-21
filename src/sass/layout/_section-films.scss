@@ -1,0 +1,121 @@
+.section-film {
+  padding: 20px 0 40px;
+  @media screen and (min-width: 768px) {
+    padding: 60px 0;
+  }
+}
+
+.films {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+
+  padding: 0;
+  margin: 0;
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+  @media screen and (min-width: 1280px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+.films__item {
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+
+  &:hover {
+    box-shadow: 2px -1px 4px var(--second-text-color);
+
+    & .films__img {
+      opacity: 0.9;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 16px;
+  }
+}
+
+.films__img {
+  display: contents;
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  & > img {
+    border-radius: 5px;
+    object-fit: cover;
+    @media screen and (min-width: 768px) {
+      width: 336px;
+      height: 455px;
+    }
+    @media screen and (min-width: 1280px) {
+      width: 395px;
+      height: 574px;
+    }
+  }
+}
+
+.films__description {
+  padding: 10px 2px 2px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 8px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-top: 12px;
+  }
+}
+
+.films__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.333;
+  text-transform: uppercase;
+}
+.films__meta {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  color: var(--primary-accent-color);
+}
+
+.films__data::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: var(--primary-accent-color);
+}
+
+.films__rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 16px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  background-color: var(--accent-color);
+  color: var(--white-text-color);
+  border-radius: 5px;
+}
+.films__rating.none {
+  display: none;
+}
