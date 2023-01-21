@@ -1,7 +1,13 @@
-
-import './js/fetch_api';
-
 import './js/refs';
+import './js/btnlibrary';
+import './js/buttonmodal/gallaryCard';
+// import './js/buttonmodal/local-save';
+import './js/buttonmodal/local-storage';
+
+// import './js/buttonmodal/modallibrary';
+// import './js/buttonmodal/traile';
+import './js/footer/footer';
+import './js/buttonmodal/modal-form';
 import './js/search-menu';
 import './js/button';
 import './js/slider';
@@ -12,7 +18,5 @@ import './js/trailer';
 import './js/firebase';
 import './js/spinner';
 import './js/search-btn';
-
 import './js/pagination';
 import './js/on_modal_team-info';
-

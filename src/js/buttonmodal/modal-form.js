@@ -1,4 +1,4 @@
-
+// import API_KEY from '../api/apiKey';
 import { load, save, remove } from './local-save';
 import trailer from './traile';
 
@@ -7,7 +7,6 @@ const modalEl = document.querySelector('.modal');
 
 galleryFilm.addEventListener('click', onOpenModal);
 let movie_id;
-
 // Ф-ція відкриття модалки
 function onOpenModal(evt) {
   evt.preventDefault();
@@ -85,7 +84,7 @@ function onOpenModal(evt) {
     changeTextBtnQueue(btnEl);
   }
   // --------test-btn--------------
-
+}
 let arrayFilmsWatched = [];
 let localWatchListJson = [];
 let watchList = [];
@@ -196,6 +195,7 @@ function changeTextBtnWatch(btnEl) {
     btnEl.setAttribute('data-show', 'true');
   }
 }
+
 // Ф-ція закриття модалки
 function onCloseBtn() {
   modalEl.classList.remove('is-open');
@@ -225,8 +225,9 @@ function backdropClose() {
       backdropEl.removeEventListener('click', onBackdropClick);
     }
   }
-  }
-  // render film card
+}
+
+// render film card
 function genresList(array) {
   let array_genre_names = [];
   let genre_namess = '';
@@ -253,6 +254,7 @@ function setPosters(poster_path) {
 
   return `https://www.themoviedb.org/t/p/w500${poster_path}`;
 }
+
 // Ф-ція рендеру кнопок модалки
 
 function btnChangeWatch() {
@@ -362,7 +364,7 @@ function murckupCard({
         class='close__button__modal'
         data-action='close-modal'
       >
-       <svg width="30" height="30" fill="none" xmlns="" style="position: absolute"><path d="m8 8 14 14M8 22 22 8" stroke="#000" stroke-width="2"/></svg>
+       <svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute"><path d="m8 8 14 14M8 22 22 8" stroke="#000" stroke-width="2"/></svg>
     </button>
     </div>
   </div>

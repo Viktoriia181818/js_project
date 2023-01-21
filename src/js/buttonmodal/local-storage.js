@@ -1,11 +1,34 @@
-import makingMarkup from ;
+import makingMarkup from "../buttonmodal/gallaryCard";
 
 const header = document.querySelector('.page-header');
 function insertFilmsLibrary(filmsMarkup) {
     header.insertAdjacentHTML('afterend', filmsMarkup);
   }
  
-
+  // КОД ПРОЕКТА
+  let arrayFilmsWatched = [];
+  let arrayFilmsQueue = [];
+  
+//   Для модалки
+  export function addWatchedLocalStorage (obj) {
+      
+      arrayFilmsWatched.push(...obj);
+  
+      localStorage.setItem('watched', JSON.stringify(arrayFilmsWatched));
+  
+      console.log('arrayFilmsWatched', arrayFilmsWatched);
+      return arrayFilmsWatched;
+  }
+//   Для модалки
+  export function addQueueLocalStorage (obj) {
+      
+      arrayFilmsQueue.push(...obj);
+  
+      localStorage.setItem('queue', JSON.stringify(arrayFilmsQueue));
+  
+      console.log('arrayFilmsQueue', arrayFilmsQueue);
+      return arrayFilmsQueue;
+  }
 //   Код для кнопок
   export function getWatchedFilms() {
       try {
@@ -29,10 +52,4 @@ function insertFilmsLibrary(filmsMarkup) {
       } catch (error) {
           console.log(error);
       }
-}
-  const header = document.querySelector('.page-header');
-function insertFilmsLibrary(filmsMarkup) {
-    header.insertAdjacentHTML('afterend', filmsMarkup);
   }
- 
- 
