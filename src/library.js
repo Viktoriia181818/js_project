@@ -1,15 +1,8 @@
 import './js/fetch_api';
-import './js/refs';
-import './js/btnlibrary';
-import './js/buttonmodal/gallaryCard';
-// import './js/buttonmodal/local-save';
-import './js/buttonmodal/local-storage';
 
-// import './js/buttonmodal/modallibrary';
-// import './js/buttonmodal/traile';
-import './js/buttonmodal/modal-form';
+import './js/refs';
 import './js/search-menu';
-// import './js/button';
+import './js/button';
 import './js/slider';
 import './js/modal';
 import './js/modal_movie_film';
