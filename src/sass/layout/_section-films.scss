@@ -55,6 +55,8 @@
   & > img {
     border-radius: 5px;
     object-fit: cover;
+    width: 280px;
+    height: 398px;
     @media screen and (min-width: 768px) {
       width: 336px;
       height: 455px;
