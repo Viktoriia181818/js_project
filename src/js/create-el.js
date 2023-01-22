@@ -9,11 +9,6 @@ getFilm();
 async function displayList(wrapper, page) {
   filmsApi.page = page;
   wrapper.innerHTML = '';
-  Loading.dots({
-    backgroundColor: 'rgba(84, 84, 84, 0.5)',
-    svgColor: '#FF6B08',
-    svgSize: '80px',
-  });
   try {
     const response = await filmsApi.getPopularFilms();
     const films = await response.results;
@@ -23,7 +18,6 @@ async function displayList(wrapper, page) {
   } catch {
     console.log;
   }
-  Loading.remove(250);
 }
 
 async function getFilm() {
@@ -35,11 +29,10 @@ async function getFilm() {
   try {
     const response = await filmsApi.getPopularFilms();
     const films = await response.results;
-
+    Loading.remove(250);
     makeFilmsMarkup(films);
     renderPagination(response.total_pages, films, displayList);
   } catch {
     console.log;
   }
-  Loading.remove(250);
 }
