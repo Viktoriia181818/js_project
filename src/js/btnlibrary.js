@@ -1,4 +1,4 @@
-import { load, save, remove } from './buttonmodal/local-save';
+import { load, save, remove } from './buttonmodal/local-st-load-remove-save';
 import './buttonmodal/modallibrary';
 
 const libGalleryRef = document.querySelector('.cards__list');
@@ -126,3 +126,5 @@ function onLoad() {
   libGalleryRef.innerHTML = ` <div class="wrong-box"> <p class="wrong-text">Not Found</p>        
  <img class="img-wrong" src=""></div>`
 }
+
+
