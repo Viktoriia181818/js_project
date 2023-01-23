@@ -16,6 +16,13 @@
   display: flex;
 }
 
+@media screen  and (max-width: 767.9px ){
+  .modal-js {
+      display: flex;
+      flex-direction: column;
+    }
+}
+
 .modal__container {
   overflow-x: auto;
 
