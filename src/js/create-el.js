@@ -31,6 +31,7 @@ async function getFilm() {
     Loading.remove(250);
     makeFilmsMarkup(films);
     renderPagination(response.total_pages, films, displayList);
+    Loading.remove(250);
   } catch {
     console.log;
   }

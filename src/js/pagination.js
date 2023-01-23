@@ -13,7 +13,7 @@ function resetCurrentPage() {
 }
 arrowLeft.style.visibility = 'hidden';
 arrowRight.style.visibility = 'hidden';
-// главная функция для рендера pagination. Callback - функция для работы с fetch (зависит от раздела, где рисуем pagination)
+// головна функція для рендера pagination. Callback - функція для роботи fetch (залежить від розділу, де рендеремо pagination)
 export function renderPagination(totalPages, listItems, callback, searchQuery) {
   paginationElement.innerHTML = '';
   arrowLeft.style.visibility = 'visible';
@@ -59,7 +59,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
         wrapper.appendChild(btn);
       }
 
-      // добавляет троеточие в pagination в зависимости от текущей страницы и общего к-ва страниц
+      // додає трикрапки в pagination в залежності від поточної сторінки та кількості сторінок
       if (
         totalPages >= 6 &&
         i == 1 &&
@@ -84,7 +84,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
     }
   }
 
-  // создает троеточия для pagination
+  // створює трикрапки pagination
   function addThreeDotsBlock() {
     const threeDots = document.createElement('div');
     threeDots.classList.add('threeDots');
@@ -115,7 +115,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
     return button;
   }
 
-  // ф-кция для отслеживания кликов по стрелке влево
+  // ф-ціядля прослуховування кліків по стрілках вліво
   function onArrowLeftClick() {
     if (currentPage > 1) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -128,7 +128,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
     hideExtremeButtons(totalPages);
   }
 
-  // ф-кция для отслеживания кликов по стрелке вправо
+  // ф-ціядля прослуховування кліків по стрілках вправо
   function onArrowRightClick() {
     if (currentPage < totalPages) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -148,7 +148,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
   disableArrowBtn(totalPages);
 }
 
-// +прячет первую и последнюю страницу по бокам для мобильных гаджетов с маленьким экраном
+// ховає першу та остатню сторінку по боках мобільної версії з маленьким екраном
 function hideExtremeButtons(totalPages) {
   try {
     if (
@@ -185,7 +185,7 @@ function disableArrowBtnAfterPageClick(e) {
   }
 }
 
-// +делает неактивными кнопки-стрелки на первой и последней  странице
+// робить неактивні кнопки- стрілки на першій чи остатній сторінці
 function disableArrowBtn(totalPages) {
   if (currentPage === 1) {
     arrowLeft.classList.add('disabled-arrow');
