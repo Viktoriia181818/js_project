@@ -1,0 +1,49 @@
+.section-libr {
+  height: calc(100vh - 20%);
+}
+.card__colection {
+  margin: 0;
+  padding: 0;
+}
+
+.list-null {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 28px;
+  line-height: 1.1875;
+  text-align: center;
+  font-style: normal;
+  @media screen and (max-width: 767px) {
+    padding: 70px;
+    font-size: 18px;
+  }
+}
+
+.hidden-list {
+  //   display: none;
+}
+
+.lbr-text {
+  color: var(--primary-accent-color);
+  font-weight: 700;
+  font-size: 50px;
+  margin-bottom: 20px;
+  @media screen and (max-width: 767px) {
+    font-size: 30px;
+  }
+}
+
+.lbr-link {
+  color: var(--second-text-color);
+  margin-left: 3px;
+  text-decoration: underline;
+  font-size: 20px;
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
+}
