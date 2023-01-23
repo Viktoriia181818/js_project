@@ -40,7 +40,9 @@ function onClosedModal(e) {
 }
 
 async function getFilmDetails(filmId) {
+  console.log(filmId);
   const film = await filmsApi.getFilmDetails(filmId);
+  console.log(film);
   markupModal(film);
 }
 function markupModal(film) {
