@@ -1,4 +1,4 @@
-import makingMarkup from ;
+// import makingMarkup from ю ;
 
 const header = document.querySelector('.page-header');
 function insertFilmsLibrary(filmsMarkup) {
