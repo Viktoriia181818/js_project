@@ -30,7 +30,6 @@ function onShowModal(e) {
 function onCloseModal(e) {
   if (e.target.className == 'modal__backdrop') {
     modalBackdropEl.classList.add('is-hidden');
-    console.log(e.target);
   }
 }
 function onClosedModal(e) {

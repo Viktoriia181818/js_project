@@ -12,5 +12,5 @@ import './js/button';
 // import './js/spinner';
 // import './js/search-btn';
 // import './js/create-el';
-// import './js/pagination';
+import './js/pagination';
 // import './js/on_modal_team-info';
