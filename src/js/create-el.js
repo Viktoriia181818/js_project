@@ -14,7 +14,6 @@ async function displayList(wrapper, page) {
     const films = await response.results;
     Loading.remove(250);
     makeFilmsMarkup(films);
-    console.log(response);
   } catch {
     console.log;
   }

@@ -11,10 +11,13 @@ let rows = 20;
 function resetCurrentPage() {
   currentPage = 1;
 }
-
+arrowLeft.style.visibility = 'hidden';
+arrowRight.style.visibility = 'hidden';
 // главная функция для рендера pagination. Callback - функция для работы с fetch (зависит от раздела, где рисуем pagination)
 export function renderPagination(totalPages, listItems, callback, searchQuery) {
   paginationElement.innerHTML = '';
+  arrowLeft.style.visibility = 'visible';
+  arrowRight.style.visibility = 'visible';
   resetCurrentPage();
   arrowLeft.removeEventListener('click', onArrowLeftClick);
   arrowRight.removeEventListener('click', onArrowRightClick);
