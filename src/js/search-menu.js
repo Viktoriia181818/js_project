@@ -5,7 +5,8 @@ import makeFilmsMarkup from './markup';
 
 const refs = {
   searchForm: document.querySelector("#search-form"),
-  searchInput: document.querySelector('.form-search__input'),
+    searchInput: document.querySelector('.form-search__input'),
+   warningField: document.querySelector('.js-warning'),
   btnSearch: document.querySelector('.search-form-button')
 }
 
@@ -22,7 +23,8 @@ function onSubmit(e) {
     if (!value) {
     Notify.failure('Please type something');
     return;
-  }
+    }
+    
 
   
   const filmsApi = new MoviesApiService();
@@ -34,7 +36,8 @@ async function getSearchFilm() {
   return films;
 }
 getSearchFilm();
-   e.target.reset();
+    e.target.reset();
+    
 }
 
 
