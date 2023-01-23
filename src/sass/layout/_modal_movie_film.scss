@@ -12,6 +12,9 @@
     padding: 0 32px;
   }
 }
+.modal-js {
+  display: flex;
+}
 
 .modal__container {
   overflow-x: auto;
@@ -231,7 +234,7 @@ p {
   margin: 0;
 }
 .is-hidden {
-	opacity: 0;
-	pointer-events: none;
-	scale: 2.5;
+  opacity: 0;
+  pointer-events: none;
+  scale: 2.5;
 }
