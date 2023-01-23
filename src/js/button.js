@@ -8,14 +8,12 @@ refs.btnListLibrary.addEventListener('click', onClickBtn);
 
 function onClickBtn(e) {
   if (e.target === refs.watchedBtn) {
-    console.log('w');
     e.target.classList.add('header-library__btn--active');
     refs.queueBtn.classList.remove('header-library__btn--active');
 
     e.target.disabled = true;
     refs.queueBtn.disabled = false;
   } else if (e.target === refs.queueBtn) {
-    console.log('q');
     e.target.classList.add('header-library__btn--active');
     refs.watchedBtn.classList.remove('header-library__btn--active');
 
